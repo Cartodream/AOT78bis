@@ -35,25 +35,27 @@
 
 		var LeafIcon = L.Icon.extend({
 		options: {
-			iconSize:     [60, 60],
+			iconSize:     [100, 100],
 		}
 	});
 
-	var greenIcon = new LeafIcon({iconUrl: 'https://aot-badminton-draft.webnode.fr/_files/system_preview_small_200000658-3b2d33c29a/AOT%20logo%20final.jpg'});
+	var BroustalIcon = new LeafIcon({iconUrl: 'image/png-clipart-color-badminton-Broustal.png'});
+	var RousseauIcon = new LeafIcon({iconUrl: 'image/png-clipart-color-badminton-Rousseau.png'});
+	var GagarineIcon = new LeafIcon({iconUrl: 'image/png-clipart-color-badminton-Gagarine.png'});
 
-	L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+	
 
                
                 L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {}).addTo(map);
 		
 		
-                L.marker([48.78275817457628, 1.9787277927155338], {icon: greenIcon})
+                L.marker([48.78275817457628, 1.9787277927155338], {icon: BroustalIcon})
 	.bindPopup("<b>Gymnase Anne-Marie et André Broustal</b><br/>6 Avenue Ludwig Van Beethoven 78190 Trappes<br /><b><img src='https://aot-badminton.fr/_files/200000272-b5bd2b6b4e/Broustal.PNG' target='_blank' width='100%' height='100%'/></b><br /><a href=\"https:\/\/maps.google.com\/maps\/dir\/\/Gymnase Broustal 78190 Trappes\" target=\"_blank\"><b>Itinéraire</b></a>")
 	.addTo(map);
-		L.marker([48.776327111701995, 1.9959440828648392], {icon: greenIcon})
+		L.marker([48.776327111701995, 1.9959440828648392], {icon: RousseauIcon})
 	.bindPopup("<b>Gymnase Rousseau</b><br/>2 rue Alfred Costes 78190 Trappes<br /><b><img src='https://aot-badminton.fr/_files/200000271-f0308f12a6/Rousseau%20Trappes.PNG' target='_blank' width='100%' height='100%'/></b><br /><a href=\"https:\/\/maps.google.com\/maps\/dir\/\/2 Rue Alfred Costes 78190 Trappes\" target=\"_blank\"><b>Itinéraire</b></a>")	
 	.addTo(map);
-		L.marker([48.77606004609193, 1.9796608345104458], {icon: greenIcon})
+		L.marker([48.77606004609193, 1.9796608345104458], {icon: GagarineIcon})
 	.bindPopup("<b>Gymnase Gargarine</b><br/>4 Rue Pierre Courtade 78190 Trappes<br /><b><img src='https://aot-badminton-draft.webnode.fr/_files/200000669-23a7b23a7d/Gargarine%20Trappes.JPG' target='_blank' width='100%' height='100%'/></b><br /><a href=\"https:\/\/maps.google.com\/maps\/dir\/\/Complexe Sportif Youri Gagarine 78190 Trappes\" target=\"_blank\"><b>Itinéraire</b></a>")
 	.addTo(map);	
                 if(scale) {
